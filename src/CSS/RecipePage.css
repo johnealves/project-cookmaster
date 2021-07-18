@@ -1,0 +1,27 @@
+.recipe-page-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.recipe-page-container h1 {
+  font-style:italic;
+}
+
+.recipe-page-container img {
+  max-height: 20rem;
+  max-width: 20rem;
+  margin: 0.5rem;
+}
+
+.recipe-page-container section {
+  display: flex;
+}
+
+.recipe-page-container ul li{
+  list-style-type: square;
+}
+
+.recipe-page-container p {
+  /* text-align: justify; */
+  max-width: 800px;
+}

@@ -1,0 +1,15 @@
+.home-container {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 200px;
+}
+
+.home-container section {
+  display: flex;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  max-width: 1000px;
+  padding: 10px;
+}
