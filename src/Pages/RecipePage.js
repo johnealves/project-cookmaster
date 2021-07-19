@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from 'react-router-dom';
 import { getRecipeById } from '../Api/get';
 import Loading from '../Components/Loading';
 import '../CSS/RecipePage.css';

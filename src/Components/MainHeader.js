@@ -21,7 +21,7 @@ export default function Main() {
           <BiUser />&nbsp;
           <span>casdatre-se</span>
         </Link>
-        <Link to="">
+        <Link to="/login">
           <BiLogInCircle />&nbsp;
           <span>Entrar</span>
         </Link>
