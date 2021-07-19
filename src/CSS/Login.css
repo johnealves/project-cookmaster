@@ -3,11 +3,13 @@
   border: 0.5px solid rgba(0, 0, 0, 0.267);
   border-radius: 10px;
   display: flex;
+  font-size: 1.2rem;
   flex-direction: column;
+  height: 500px;
   justify-content: center;
   margin: auto;
   margin-top: 3rem;
-  max-width: 350px;
+  max-width: 400px;
   padding: 30px 20px;
 }
 
@@ -35,9 +37,9 @@
 
 .login-container button {
   margin: 0.5rem;
-  width: 94%;
+  width: 18rem;
 }
 
-.login-container a:hover {
+.login-container a {
   text-decoration: underline;
 }

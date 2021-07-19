@@ -8,7 +8,7 @@ export default function Main() {
     <header className="main-header">
       <h1>
         <Link to="/">
-          <span className="title-project">Project</span>
+          {/* <span className="title-project">Project</span> */}
           <span className="title-cookmaster">COOKMASTER</span>
         </Link>
       </h1>

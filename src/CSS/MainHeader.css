@@ -1,7 +1,8 @@
 .main-header {
   align-items: center;
   align-content: center;
-  background-color: rgb(248, 247, 242);
+  background-color: rgba(236, 9, 9, 0.89);
+  color: aliceblue;
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -13,13 +14,14 @@
 }
 
 .title-cookmaster {
-  color: brown;
+  color: white;
   font-style: italic;
   font-weight: 600;
 }
 
 .main-header nav {
   align-items: center;
+  color: write;
   display: flex;
   font-size: 1.2rem;
   margin-right: 2rem;
@@ -27,6 +29,7 @@
 
 .main-header nav a {
   align-items: baseline;
+  color: #fff;
   display: flex;
   margin-right: 1rem;
 }
