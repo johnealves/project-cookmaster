@@ -1,0 +1,13 @@
+.form-new-user-container {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  margin-top: 5rem;
+  padding: 50px 20px;
+  max-width: 500px;
+}

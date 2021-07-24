@@ -1,25 +1,30 @@
 import axios from 'axios';
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { noCors } from '../Api/get';
 import '../CSS/Login.css'
+import { setToken } from '../Redux/Actions/userActions';
 
-function Login() {
+function Login({ newToken }) {
   const history = useHistory();
 
   const onSubmit = (ev) => {
     ev.preventDefault()
     console.log('submit')
-    const email = document.getElementById('input-email').value
+    const username = document.getElementById('input-username').value
     const password = document.getElementById('input-password').value
     
     axios.post(`${noCors}https://cookmaster-back-end.herokuapp.com/login`, {
-      email,
+      username,
       password,
     })
-    .then((response) => localStorage.setItem('token', response.data.token))
+    .then((response) => {
+      localStorage.setItem('cookmasterToken', response.data.token)
+      newToken(response.data.token)
+    })
     .then(() => history.push('/'))
-    .catch((err) => console.log(err))
+    .catch((err) => alert('Dados incorretos! Verifique usuario e senha e tente novamente.'))
 
   }
 
@@ -28,9 +33,9 @@ function Login() {
       <h1>Login</h1>
       <form>
         <div className="mb-3">
-          <label htmlFor="input-email" className="form-label">
+          <label htmlFor="input-username" className="form-label">
             Email:
-            <input id="input-email" className="form-control" type="text" placeholder="Email" required />
+            <input id="input-username" className="form-control" type="text" placeholder="Email" required />
           </label>
         </div>
         <div className="mb-3">
@@ -50,4 +55,8 @@ function Login() {
   )
 }
 
-export default Login;
+const mapDispatchToProps = (dispatch) => ({
+  newToken: (token) => dispatch(setToken(token)),
+});
+
+export default connect(null, mapDispatchToProps)(Login);

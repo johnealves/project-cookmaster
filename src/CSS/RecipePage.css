@@ -1,6 +1,7 @@
 .recipe-page-container {
   max-width: 1000px;
   margin: auto;
+  padding: 50px 0;
 }
 
 .recipe-page-container h1 {
@@ -8,6 +9,7 @@
 }
 
 .recipe-page-container img {
+  border-radius: 5px;
   max-height: 20rem;
   max-width: 20rem;
   margin: 0.5rem;
@@ -15,6 +17,7 @@
 
 .recipe-page-container section {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 .recipe-page-container ul li{

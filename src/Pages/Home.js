@@ -15,8 +15,6 @@ function Home() {
     return <Loading />
   }
 
-  console.log(recipes)
-
   return (
     <div className="home-container">
       <section>

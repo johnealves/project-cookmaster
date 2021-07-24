@@ -1,7 +1,7 @@
 .main-header {
   align-items: center;
   align-content: center;
-  background-color: rgba(236, 9, 9, 0.89);
+  background-color: #ff1917;
   color: aliceblue;
   display: flex;
   justify-content: space-between;
@@ -28,8 +28,13 @@
 }
 
 .main-header nav a {
-  align-items: baseline;
+  align-items: center;
   color: #fff;
   display: flex;
   margin-right: 1rem;
+}
+
+.main-header button {
+  background-color: transparent;
+  color: #fff;
 }

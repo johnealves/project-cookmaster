@@ -32,17 +32,34 @@
 .recipe-info {
   align-content: center;
   align-items: center;
+  color:rgba(0, 0, 0, 0.212);
   display: flex;
-  font-size: 1.2rem;
+  flex-direction: column;
+  font-size: 0.9rem;
   font-weight: 500;
   /* height: 100%; */
-  justify-content: center;
+  justify-content: flex-start;
   padding: 10px;
   text-align: center;
   width: 60%;
+}
+
+.recipe-info .categ {
+  flex-grow: 1;
+  max-height: 30px;
+}
+
+.recipe-info span {
+  font-size: 1.2rem;
+}
+
+.recipe-info .autor {
+  color: #d82436;
+  font-size: 0.9rem;
 }
 
 .recipe-container h3, h4 {
   align-self: center;
   text-align: center;
 }
+
