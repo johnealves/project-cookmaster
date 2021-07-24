@@ -1,10 +1,12 @@
 import axios from 'axios';
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import { useHistory } from 'react-router-dom';
 import { noCors } from '../Api/get';
 import '../CSS/FormNewUser.css';
 
 function FormNewUser() {
+  const history = useHistory()
 
   const submitNewUser = (ev) => {
     ev.preventDefault()
@@ -18,27 +20,29 @@ function FormNewUser() {
       email,
       password,
     })
+    .then(() => history.push('/'))
+    .catch((err) => alert('Usuario ou email ja cadastrado'));
   }
 
   return (
     <form className="form-new-user-container">
       <h2>Cadastro</h2>
       <div className="mb-3">
-        <label className="form-label">
+        <label className="form-label" htmlFor="username">
           Nome de Usuario:
           <input id="username" className="form-control" type="name" placeholder="usuario" required/>
         </label>
       </div>
       <div className="mb-3">
-        <label className="form-label">
+        <label className="form-label" htmlFor="email" >
           Email:
-          <input className="form-control" type="email" placeholder="Email" required/>
+          <input id="email" className="form-control" type="email" placeholder="Email" required/>
         </label>
       </div>
       <div className="mb-3">
-        <label className="form-label">
+        <label className="form-label" htmlFor="password" >
           Senha:
-          <input className="form-control" type="password" placeholder="Senha" required/>
+          <input id="password" className="form-control" type="password" placeholder="Senha" required/>
         </label>
       </div>
       <Button variant="danger" type="submit" onClick={ submitNewUser }>
