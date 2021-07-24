@@ -1,0 +1,26 @@
+.user-page-container {
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 100px;
+  max-width: 1000px;
+}
+
+.user-aside-bar ul {
+  background-color: #fff;
+  color: rgb(101, 107, 112);
+  max-width: 13rem;
+  padding: 10px;
+}
+
+.user-aside-bar li {
+  border-bottom: 0.5px solid rgb(147, 158, 167);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  padding: 5px;
+}
+
+.user-page-container section {
+  background-color: #fff;
+  margin-left: 0.5rem;
+  padding: 20px
+}

@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 import { Link, useHistory } from 'react-router-dom';
 import { noCors } from '../Api/get';
 import '../CSS/Login.css'
-import { setToken } from '../Redux/Actions/userActions';
+import { setToken, setUser } from '../Redux/Actions/userActions';
 
-function Login({ newToken }) {
+function Login({ newToken, newUser }) {
   const history = useHistory();
 
   const onSubmit = (ev) => {
@@ -21,6 +21,7 @@ function Login({ newToken }) {
     })
     .then((response) => {
       localStorage.setItem('cookmasterToken', response.data.token)
+      newUser(response.data.user)
       newToken(response.data.token)
     })
     .then(() => history.push('/'))
@@ -57,6 +58,7 @@ function Login({ newToken }) {
 
 const mapDispatchToProps = (dispatch) => ({
   newToken: (token) => dispatch(setToken(token)),
+  newUser: (user) => dispatch(setUser(user))
 });
 
 export default connect(null, mapDispatchToProps)(Login);

@@ -12,6 +12,11 @@ const userReducer = (state = INITIAL_STATE, action) => {
         ...state,
         token: action.token,
       };
+    case 'NEW_USER':
+      return {
+        ...state,
+        user: action.user
+      }
     default:
       return state;
   }

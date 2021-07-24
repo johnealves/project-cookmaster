@@ -1,0 +1,32 @@
+.category-bar-container {
+  align-items: center;
+  align-content: center;
+  background-color: #fff;
+  color: rgb(88, 90, 92);
+  display: flex;
+  font-size: 0.95rem;
+  flex-direction: column;
+  padding: 10px;
+  position:relative;
+  top: 35px;
+}
+
+.category-bar-container ul {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 14rem;
+}
+
+.category-bar-container li {
+  border-bottom: solid 0.5px rgba(90, 85, 85, 0.514);
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+
+.category-bar-container p {
+  text-align: center;
+}

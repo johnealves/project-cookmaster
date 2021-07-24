@@ -1,4 +1,9 @@
 export const setToken = (token) => ({
   type: 'NEW_TOKEN',
-  token,
+  token, 
+});
+
+export const setUser = (user) => ({
+  type: 'NEW_USER',
+  user, 
 });

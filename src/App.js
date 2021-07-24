@@ -8,6 +8,7 @@ import NotFound from './Pages/NotFound';
 import './App.css';
 import Login from './Pages/Login';
 import FormNewUser from './Pages/FromNewUser';
+import UserPage from './Pages/UserPage';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" component={ Login } />
           <Route path="/recipes/:recipeId" component={ RecipePage } />
           <Route path="/register" component={ FormNewUser } />
+          <Route path="/user/dashboard" component={ UserPage } />
           <Route component={ NotFound } />
         </Switch>
       </BrowserRouter>

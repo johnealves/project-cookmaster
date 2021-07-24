@@ -42,7 +42,7 @@ function MainHeader({ token, newToken }) {
             </>
           ) : (
             <>
-              <Link to="">
+              <Link to="/user/dashboard">
                 <BiUser />&nbsp;
                 <span>Minha página</span>
               </Link>
