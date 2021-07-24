@@ -9,9 +9,9 @@ function FormNewUser() {
   const submitNewUser = (ev) => {
     ev.preventDefault()
 
-    const username = document.getElementById('username');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
 
     axios.post(`${noCors}https://cookmaster-back-end.herokuapp.com/users`, {
       username,
