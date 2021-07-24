@@ -1,4 +1,4 @@
-const noCors = 'https://floating-beyond-79262.herokuapp.com/'
+export const noCors = 'https://floating-beyond-79262.herokuapp.com/'
 
 export const listAllRecipes = () => fetch(`${noCors}https://cookmaster-back-end.herokuapp.com/recipes`)
     .then((response) => response.json())

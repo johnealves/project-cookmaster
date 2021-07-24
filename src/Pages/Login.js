@@ -1,15 +1,25 @@
+import axios from 'axios';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { noCors } from '../Api/get';
 import '../CSS/Login.css'
 
 function Login() {
+  const history = useHistory();
 
   const onSubmit = (ev) => {
     ev.preventDefault()
-
+    console.log('submit')
     const email = document.getElementById('input-email').value
     const password = document.getElementById('input-password').value
     
+    axios.post(`${noCors}https://cookmaster-back-end.herokuapp.com/login`, {
+      email,
+      password,
+    })
+    .then((response) => localStorage.setItem('token', response.data.token))
+    .then(() => history.push('/'))
+    .catch((err) => console.log(err))
 
   }
 

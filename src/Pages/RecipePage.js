@@ -37,6 +37,12 @@ function RecipePage({ match: { params: { recipeId } } }) {
     return <Loading />
   }
 
+  const handlePreparation = () => {
+    const result = recipe.preparation.split('.')
+    const array = result.map((value, i) => (i < (result.length - 1)) && <li>{ value }</li>);
+    return array
+  }
+
   return (
     <div className="recipe-page-container">
       <h1>{ recipe.name }</h1>
@@ -48,7 +54,7 @@ function RecipePage({ match: { params: { recipeId } } }) {
         </ul>
       </section>
       <h5>Modo de Preparo:</h5>
-      <p>{ recipe.preparation }</p>
+      <ol>{ handlePreparation() }</ol>
     </div>
   )
 }
