@@ -1,5 +1,8 @@
+import { RECEIVE_RECIPIES } from "../Actions/actionTypes";
+
 const INITIAL_STATE = {
   token: localStorage.getItem('cookmasterToken'),
+  userRecipies: []
 }
 
 // const getToken = localStorage.getItem('cookmasterToken');
@@ -16,6 +19,11 @@ const userReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         user: action.user
+      }
+    case RECEIVE_RECIPIES:
+      return {
+        ...state,
+        userRecipies: action.recipies,
       }
     default:
       return state;

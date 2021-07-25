@@ -2,11 +2,12 @@
   align-items: center;
   align-content: center;
   background-color: #fff;
-  color: rgb(88, 90, 92);
+  
   display: flex;
   font-size: 0.95rem;
   flex-direction: column;
-  padding: 10px;
+  height: 800px;
+  padding: 10px 0;
   position:relative;
   top: 35px;
 }
@@ -17,14 +18,23 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  width: 14rem;
+  padding: 20px;
+  margin-left: 0;
+  width: 21rem;
 }
 
 .category-bar-container li {
-  border-bottom: solid 0.5px rgba(90, 85, 85, 0.514);
+  border-bottom: solid 0.5px rgba(197, 184, 184, 0.507);
+  color: rgb(128, 136, 145);
   cursor: pointer;
   margin-bottom: 0.5rem;
+  padding: 7px;
   width: 90%;
+}
+
+.category-bar-container li:hover {
+  color: black;
+  text-decoration: underline;
 }
 
 .category-bar-container p {
