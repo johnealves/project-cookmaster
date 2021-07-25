@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-  sectionUser: 'my-recipies'
+  sectionUser: 'my-recipes'
 }
 
 const userPageReducer = (state = INITIAL_STATE, action) => {

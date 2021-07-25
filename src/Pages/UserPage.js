@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import UserAsideBar from '../Components/UserAsideBar';
 import UserRecipes from '../Components/UserRecipes';
+import UserUpdateRegister from '../Components/userUpdateRegister';
 import '../CSS/UserPage.css'
 
 function UserPage({ section }) {
@@ -9,11 +10,10 @@ function UserPage({ section }) {
     <div className="user-page-container">
       {/* <h2>Minha conta</h2> */}
       <UserAsideBar />
-      { (section === 'my-recipies') && (
-        <div>
-          <UserRecipes />
-        </div>
-      ) }
+      <div className="user-section">
+        { (section === 'my-recipes') && <UserRecipes /> }
+        { (section === 'update-register') && <UserUpdateRegister /> }
+      </div>
     </div>
   )
 }

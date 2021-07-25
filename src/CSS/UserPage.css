@@ -5,22 +5,24 @@
   max-width: 1000px;
 }
 
-.user-aside-bar ul {
+.user-aside-bar {
   background-color: #fff;
   color: rgb(101, 107, 112);
   max-width: 13rem;
   padding: 10px;
 }
 
-.user-aside-bar li {
+.user-aside-bar button {
   border-bottom: 0.5px solid rgb(147, 158, 167);
   cursor: pointer;
   margin-bottom: 0.5rem;
-  padding: 5px;
+  padding: 15px 5px;
+  width: 100%;
 }
 
-.user-page-container section {
+.user-section {
   background-color: #fff;
   margin-left: 0.5rem;
-  padding: 20px
+  padding: 20px;
+  width: 50rem;
 }
