@@ -35,7 +35,7 @@ function Login({ newToken, newUser }) {
       <form>
         <div className="mb-3">
           <label htmlFor="input-username" className="form-label">
-            Email:
+            Usuario:
             <input id="input-username" className="form-control" type="text" placeholder="Email" required />
           </label>
         </div>

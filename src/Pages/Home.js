@@ -12,7 +12,7 @@ function Home() {
     listAllRecipes().then((result) => setRecipes(result));
   }, [setRecipes])
 
-  if (recipes.length === 0) {
+  if ((recipes) && recipes.length === 0) {
     return <Loading />
   }
 

@@ -9,6 +9,7 @@ import './App.css';
 import Login from './Pages/Login';
 import FormNewUser from './Pages/FromNewUser';
 import UserPage from './Pages/UserPage';
+import FormNewRecipe from './Pages/FormNewRecipe';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/" component={ Home } />
           <Route path="/login" component={ Login } />
           <Route path="/recipes/:recipeId" component={ RecipePage } />
+          <Route path='/recipe/new-recipe' component={ FormNewRecipe } />
           <Route path="/register" component={ FormNewUser } />
           <Route path="/user/dashboard" component={ UserPage } />
           <Route component={ NotFound } />

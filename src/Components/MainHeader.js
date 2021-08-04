@@ -24,7 +24,7 @@ function MainHeader({ token, newToken }) {
         </Link>
       </h1>
       <nav>
-        <Link to="">
+        <Link to="/recipe/new-recipe">
           <BiFoodMenu />&nbsp;
           <span>Envie sua receita</span>
         </Link>

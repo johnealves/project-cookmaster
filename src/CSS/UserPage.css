@@ -14,10 +14,16 @@
 
 .user-aside-bar button {
   border-bottom: 0.5px solid rgb(147, 158, 167);
+  background-color: #fff;
+  color: rgb(150, 137, 137);
   cursor: pointer;
   margin-bottom: 0.5rem;
   padding: 15px 5px;
   width: 100%;
+}
+
+.user-aside-bar button:hover {
+  color: rgba(0, 0, 0, 0.801);
 }
 
 .user-section {

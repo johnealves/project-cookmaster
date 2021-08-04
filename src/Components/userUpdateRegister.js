@@ -1,15 +1,26 @@
+import axios from 'axios';
 import React, { useEffect } from 'react';
 import Button from 'react-bootstrap/Button'
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
-function UserUpdateRegister({ token }) {
+function UserUpdateRegister({ user }) {
+  const history = useHistory();
 
-  useEffect(() => {
-    console.log(token)
-  }, [])
+  const submitUpdateUser = (ev) => {
+    ev.preventDefault()
 
-  const submitUpdateUser = () => {
-    console.log('update')
+    const username = document.getElementById('username').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    axios.put(`https://cookmaster-back-end.herokuapp.com/users/${user.userId}`, {
+      username,
+      email,
+      password,
+    })
+    .then(() => history.push('/'))
+    .catch((err) => alert(err.message));
   }
 
   return (
@@ -18,13 +29,20 @@ function UserUpdateRegister({ token }) {
       <div className="mb-3">
         <label className="form-label" htmlFor="username">
           Nome de Usuario:
-          <input id="username" className="form-control" type="name" placeholder="usuario" required/>
+          <input 
+            id="username"
+            className="form-control"
+            type="name"
+            placeholder="usuario"
+            defaultValue={ user.username }
+            required
+          />
         </label>
       </div>
       <div className="mb-3">
         <label className="form-label" htmlFor="email" >
           Email:
-          <input id="email" className="form-control" type="email" placeholder="Email" required/>
+          <input id="email" className="form-control" type="email" defaultValue={ user.email } placeholder="Email" required/>
         </label>
       </div>
       <div className="mb-3">
